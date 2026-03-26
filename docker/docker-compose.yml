@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  socioalchemy:
+    image: nginx:alpine
+    container_name: socioalchemy
+    restart: unless-stopped
+    volumes:
+      - ../site:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - "8270:80"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=false"
+    networks:
+      - traefik-net
+
+networks:
+  traefik-net:
+    external: true

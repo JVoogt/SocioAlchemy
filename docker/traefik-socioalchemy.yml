@@ -1,0 +1,29 @@
+http:
+  routers:
+    socioalchemy:
+      rule: "Host(`socioalchemy.co.za`) || Host(`www.socioalchemy.co.za`) || Host(`socioalchemy.voogt.co.za`)"
+      entryPoints:
+        - websecure
+      service: socioalchemy
+      tls:
+        certResolver: letsencrypt
+
+    socioalchemy-http:
+      rule: "Host(`socioalchemy.co.za`) || Host(`www.socioalchemy.co.za`) || Host(`socioalchemy.voogt.co.za`)"
+      entryPoints:
+        - web
+      middlewares:
+        - redirect-to-https
+      service: socioalchemy
+
+  services:
+    socioalchemy:
+      loadBalancer:
+        servers:
+          - url: "http://192.168.0.120:8270"
+
+  middlewares:
+    redirect-to-https:
+      redirectScheme:
+        scheme: https
+        permanent: true
