@@ -1,7 +1,9 @@
-// SocioAlchemy — Minimal JS for scroll reveals, mobile menu, sticky nav
+// SocioAlchemy - Minimal JS for scroll reveals, mobile menu, sticky nav
 
 (function () {
   'use strict';
+
+  const nav = document.getElementById('nav');
 
   // ── Scroll Reveal (Intersection Observer) ──
   const revealElements = document.querySelectorAll('.reveal');
@@ -21,10 +23,65 @@
     revealObserver.observe(el);
   });
 
+  function revealHashTarget() {
+    if (!window.location.hash) return;
+    const target = document.querySelector(window.location.hash);
+    if (!target) return;
+
+    const targetRevealElements = target.matches('.reveal')
+      ? [target]
+      : target.querySelectorAll('.reveal');
+
+    targetRevealElements.forEach((el) => {
+      el.classList.add('revealed');
+      revealObserver.unobserve(el);
+    });
+  }
+
+  function scrollHashTarget() {
+    if (!window.location.hash) return;
+    const target = document.querySelector(window.location.hash);
+    if (!target) return;
+
+    const navHeight = nav ? nav.offsetHeight : 0;
+    const targetPos = target.getBoundingClientRect().top + window.scrollY - navHeight;
+    window.scrollTo({ top: targetPos, behavior: 'auto' });
+  }
+  revealHashTarget();
+
+  // ── CTA tracking ──
+  function trackCtaClick(label) {
+    const event = {
+      event: 'cta_click',
+      cta_label: label,
+      page_path: window.location.pathname
+    };
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(event);
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'cta_click', {
+        event_category: 'lead',
+        event_label: label
+      });
+    }
+
+    if (window.location.hostname === 'localhost') {
+      console.info('[SocioAlchemy]', event);
+    }
+  }
+
+  document.querySelectorAll('[data-track]').forEach((link) => {
+    link.addEventListener('click', () => {
+      trackCtaClick(link.getAttribute('data-track'));
+    });
+  });
+
   // ── Sticky Nav ──
-  const nav = document.getElementById('nav');
   let lastScroll = 0;
   function handleScroll() {
+    if (!nav) return;
     const scrollY = window.scrollY;
     if (scrollY > 80) {
       nav.classList.add('nav--solid');
@@ -70,7 +127,7 @@
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
-        const navHeight = nav.offsetHeight;
+        const navHeight = nav ? nav.offsetHeight : 0;
         const targetPos = target.getBoundingClientRect().top + window.scrollY - navHeight;
         window.scrollTo({ top: targetPos, behavior: 'smooth' });
       }
@@ -97,6 +154,24 @@
     { threshold: 0.3, rootMargin: '-80px 0px -40% 0px' }
   );
   sections.forEach((section) => sectionObserver.observe(section));
+
+  function syncHashTarget() {
+    revealHashTarget();
+    scrollHashTarget();
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', syncHashTarget);
+  } else {
+    syncHashTarget();
+  }
+  window.addEventListener('load', () => {
+    syncHashTarget();
+    window.setTimeout(syncHashTarget, 250);
+    window.setTimeout(syncHashTarget, 800);
+  });
+  window.addEventListener('hashchange', () => {
+    syncHashTarget();
+  });
 
   // ── Parallax on hero (subtle) ──
   const heroGlow = document.querySelector('.hero__glow');

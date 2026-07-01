@@ -35,6 +35,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="css/style.css">
 
   <!-- JSON-LD Structured Data -->
@@ -237,10 +238,11 @@
         <p class="hero__pre reveal">The Social Alchemist</p>
         <h1 class="hero__title reveal">Socio<span class="gold-shimmer">Alchemy</span></h1>
         <p class="hero__tagline reveal">Social Media. Strategy. Sorcery.</p>
-        <p class="hero__desc reveal">Freelance social media management from Knysna, Garden Route. I find your brand's story and turn it into content that actually works. The kind that gets the right people paying attention.</p>
+        <p class="hero__lead reveal">Your business is good. Your social media should make that obvious.</p>
+        <p class="hero__desc reveal">I help Garden Route brands turn quiet pages, inconsistent posting, and scattered ideas into content that brings the right enquiries.</p>
         <div class="hero__actions reveal">
-          <a href="#contact" class="btn btn--gold">Let's Create Together</a>
-          <a href="#services" class="btn btn--outline">See What I Do</a>
+          <a href="https://wa.me/27726644422?text=Hi%20T%2C%20can%20you%20look%20at%20my%20page%20and%20tell%20me%20where%20you%20would%20start%3F%20My%20business%20is%3A%20" target="_blank" rel="noopener noreferrer" class="btn btn--gold" data-track="hero-page-check">Send Me Your Page</a>
+          <a href="#services" class="btn btn--outline">Find Your Starting Point</a>
         </div>
       </div>
       <div class="hero__portrait reveal">
@@ -255,6 +257,20 @@
     </div>
   </section>
 
+  <!-- Trust -->
+  <section class="trust-strip section--light" aria-label="Trusted brand categories">
+    <div class="container">
+      <p class="trust-strip__line reveal">Trusted with content for hospitality, adventure, music, trades, product, and local business brands.</p>
+      <div class="trust-strip__names reveal" aria-label="Selected brands">
+        <span>Kampi.co.za</span>
+        <span>PRO-Installations</span>
+        <span>Etienne Steyn</span>
+        <span>Jane's</span>
+        <span>Adams</span>
+      </div>
+    </div>
+  </section>
+
   <!-- About -->
   <section class="about section section--light" id="about">
     <div class="container">
@@ -264,9 +280,9 @@
           <h2 class="section__title reveal">Every brand has a <em class="accent">voice</em>.</h2>
           <h3 class="section__subtitle reveal">I help bring it to life.</h3>
           <div class="about__text reveal">
-            <p>I'm T. I started this during lockdown in 2020, when the world paused and I couldn't sit still. What began as helping a friend with their Facebook page turned into something I couldn't walk away from — finding the real story behind a brand and making sure the right people hear it.</p>
+            <p>I'm T. I started this during lockdown in 2020, when the world paused and I couldn't sit still. What began as helping a friend with their Facebook page turned into something I couldn't walk away from: finding the real story behind a brand and making sure the right people hear it.</p>
             <p>I've worked with guest houses, beauty clinics, musicians, tradespeople, and product companies in Knysna, Plettenberg Bay, George, and across the Garden Route. Each one taught me something. Each one trusted me with their voice.</p>
-            <p>SocioAlchemy isn't just a new name. It's what this work has always been — taking something raw and turning it into something that shines.</p>
+            <p>SocioAlchemy isn't just a new name. It's what this work has always been: taking something raw and turning it into something that shines.</p>
           </div>
         </div>
         <div class="about__timeline reveal">
@@ -297,124 +313,73 @@
     </div>
   </section>
 
+  <!-- Pain Recognition -->
+  <section class="pain section section--light">
+    <div class="container">
+      <div class="pain__inner">
+        <div class="pain__copy reveal">
+          <p class="section__label">Before we talk services</p>
+          <h2 class="section__title">Does this sound like <em class="accent">you?</em></h2>
+          <p>You know your business is good, but your page does not show it clearly enough yet.</p>
+        </div>
+        <div class="pain__list reveal">
+          <p>You post when you remember, then disappear again.</p>
+          <p>You get likes, but not enough enquiries.</p>
+          <p>You do not know what to say without sounding salesy.</p>
+          <p>Your photos, captions, ads, and Google listing all feel like separate jobs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Services -->
   <section class="services section section--dark" id="services">
     <div class="container">
       <p class="section__label section__label--light reveal">Services</p>
-      <h2 class="section__title section__title--light reveal">It's more than just <em class="accent">posting</em>.</h2>
-      <p class="section__intro section__intro--light reveal">There's a lot more behind a good feed than what you see. Research, planning, writing, design, scheduling, engagement. I handle all of it so you don't have to think about it.</p>
+      <h2 class="section__title section__title--light reveal">Start with the problem your page needs to <em class="accent">solve</em>.</h2>
+      <p class="section__intro section__intro--light reveal">Most business owners do not need a bigger list of marketing tasks. They need someone to turn the noise into a plan, create the content, and keep the right people moving closer to an enquiry.</p>
 
-      <!-- Three Pillars -->
-      <div class="pillars">
-        <div class="pillar reveal">
-          <div class="pillar__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M24 12v12l8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <circle cx="24" cy="24" r="3" fill="currentColor"/>
-            </svg>
-          </div>
-          <h3 class="pillar__title">Strategic Vision</h3>
-          <p class="pillar__text">Who are you trying to reach? What are your competitors doing? Where should you be spending your time? I figure that out first, then build a plan around it.</p>
-        </div>
-        <div class="pillar reveal">
-          <div class="pillar__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M16 28l6-8 5 6 5-10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="34" cy="16" r="2.5" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <h3 class="pillar__title">Creative Execution</h3>
-          <p class="pillar__text">Photography, design, and copy that people actually stop scrolling for. Not just pretty pictures, but content with a purpose behind it.</p>
-        </div>
-        <div class="pillar reveal">
-          <div class="pillar__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 36V20M20 36V16M28 36V24M36 36V12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M8 36h32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3 class="pillar__title">Measurable Magic</h3>
-          <p class="pillar__text">I track what's working and what isn't so we can do more of the good stuff. Likes are nice, but actual business coming through the door is better.</p>
-        </div>
+      <div class="problem-grid">
+        <article class="problem-card reveal">
+          <span class="problem-card__prompt">I need people to find and trust my business</span>
+          <h3 class="problem-card__title">Local visibility that feels credible</h3>
+          <p class="problem-card__text">For guest houses, salons, restaurants, trades, and service businesses that need to look active, current, and worth contacting when someone checks them online.</p>
+          <ul class="problem-card__list">
+            <li>Google Business Profile setup and updates</li>
+            <li>Facebook and Instagram profile polish</li>
+            <li>Trust-building posts, photos, and reviews</li>
+          </ul>
+        </article>
+
+        <article class="problem-card reveal">
+          <span class="problem-card__prompt">I need consistent content, but I do not have time</span>
+          <h3 class="problem-card__title">A social presence that does not go quiet</h3>
+          <p class="problem-card__text">For busy owners who know they should be posting, but do not have the time, confidence, or headspace to keep planning, writing, designing, and replying.</p>
+          <ul class="problem-card__list">
+            <li>Monthly content planning and scheduling</li>
+            <li>Captions, graphics, photography, and short video</li>
+            <li>Community replies and page management</li>
+          </ul>
+        </article>
+
+        <article class="problem-card reveal">
+          <span class="problem-card__prompt">I need enquiries, bookings, or sales</span>
+          <h3 class="problem-card__title">Campaigns built around action</h3>
+          <p class="problem-card__text">For brands that need more than pretty posts: launches, events, seasonal pushes, paid ads, or a clearer path from attention to WhatsApp, booking, or sale.</p>
+          <ul class="problem-card__list">
+            <li>Facebook, Instagram, TikTok, and Google Ads</li>
+            <li>Campaign copy, creative, and audience targeting</li>
+            <li>Simple reporting on what is working</li>
+          </ul>
+        </article>
       </div>
 
-      <!-- Service Categories -->
-      <h3 class="services__category-title reveal">Social Media Management</h3>
-      <div class="services__grid">
-        <div class="service-card reveal">
-          <span class="service-card__number">01</span>
-          <h4 class="service-card__title">Facebook Page Management</h4>
-          <p class="service-card__text">I run your Facebook page so you don't have to. Content planning, daily posting, responding to messages and comments, managing your community. Most Garden Route businesses still get their leads from Facebook, and I make sure yours is working hard.</p>
+      <div class="services__note reveal">
+        <div>
+          <span class="services__offer">Free Social Page Check</span>
+          <p>Send me your Facebook or Instagram page. I will send back 3 things I would fix first.</p>
         </div>
-        <div class="service-card reveal">
-          <span class="service-card__number">02</span>
-          <h4 class="service-card__title">Instagram Management</h4>
-          <p class="service-card__text">Feed posts, Stories, Reels, hashtag strategy, engagement. I keep your Instagram active and on-brand so it actually brings in enquiries. Works especially well for hospitality, beauty, and lifestyle brands in Knysna and the Garden Route.</p>
-        </div>
-        <div class="service-card reveal">
-          <span class="service-card__number">03</span>
-          <h4 class="service-card__title">TikTok Content & Management</h4>
-          <p class="service-card__text">18 million South Africans are on TikTok and almost nobody in the Garden Route is helping businesses use it properly. I create short-form video content and manage your TikTok presence from scratch. First-mover advantage is real.</p>
-        </div>
-      </div>
-
-      <h3 class="services__category-title reveal">Paid Advertising</h3>
-      <div class="services__grid">
-        <div class="service-card reveal">
-          <span class="service-card__number">04</span>
-          <h4 class="service-card__title">Facebook & Instagram Ads</h4>
-          <p class="service-card__text">Meta Ads setup and management. I build campaigns, write the copy, design the creative, target the right audience, and track what's working. You set the budget, I make sure it's not wasted. Available for businesses in Knysna, George, Plett, and across the Western Cape.</p>
-        </div>
-        <div class="service-card reveal">
-          <span class="service-card__number">05</span>
-          <h4 class="service-card__title">Google Ads Management</h4>
-          <p class="service-card__text">Search ads that put your business in front of people who are already looking for what you offer. I handle keyword research, ad creation, bid management, and monthly reporting. Strong for trades, services, and accommodation businesses on the Garden Route.</p>
-        </div>
-        <div class="service-card reveal">
-          <span class="service-card__number">06</span>
-          <h4 class="service-card__title">TikTok Ads</h4>
-          <p class="service-card__text">TikTok advertising in South Africa is still early, which means low costs and less competition. Spark Ads, in-feed video, targeted campaigns. If you want to reach a younger audience, this is where the attention is right now.</p>
-        </div>
-      </div>
-
-      <h3 class="services__category-title reveal">Content & Creative</h3>
-      <div class="services__grid">
-        <div class="service-card reveal">
-          <span class="service-card__number">07</span>
-          <h4 class="service-card__title">Content Shoots</h4>
-          <p class="service-card__text">On-location photography and video shoots for your business. I come to your guest house, restaurant, salon, or workspace and capture what makes it special. Half-day and full-day rates. The Garden Route is a beautiful backdrop and your content should show it.</p>
-        </div>
-        <div class="service-card reveal">
-          <span class="service-card__number">08</span>
-          <h4 class="service-card__title">Graphic Design & Brand Material</h4>
-          <p class="service-card__text">Social media templates, promotional graphics, menus, flyers, event posters. Everything designed to look like your brand, not like a Canva template everyone else is using.</p>
-        </div>
-        <div class="service-card reveal">
-          <span class="service-card__number">09</span>
-          <h4 class="service-card__title">Copywriting</h4>
-          <p class="service-card__text">Captions, bios, website text, campaign copy. Words that sound like you and make people want to do something. I write in English and can work with Afrikaans content for bilingual audiences in the Western Cape.</p>
-        </div>
-      </div>
-
-      <h3 class="services__category-title reveal">Setup & Strategy</h3>
-      <div class="services__grid">
-        <div class="service-card reveal">
-          <span class="service-card__number">10</span>
-          <h4 class="service-card__title">Google Business Profile Setup</h4>
-          <p class="service-card__text">Your Google Business Profile is often the first thing people see when they search for you. I set it up properly, optimise it, add photos, and make sure your hours, services, and contact info are correct. If you're a local business in Knysna or the Garden Route, this is one of the most important things you can do.</p>
-        </div>
-        <div class="service-card reveal">
-          <span class="service-card__number">11</span>
-          <h4 class="service-card__title">Social Media Profile Setup</h4>
-          <p class="service-card__text">Professional setup of your Facebook Business Page, Instagram Business account, and TikTok Business profile. Proper bios, branding, contact info, and linked accounts. Good for new businesses or anyone who knows their profiles need work.</p>
-        </div>
-        <div class="service-card reveal">
-          <span class="service-card__number">12</span>
-          <h4 class="service-card__title">Marketing Strategy & Consulting</h4>
-          <p class="service-card__text">Not sure where to start? I'll look at what you're doing now, what your competitors in the Garden Route are up to, and put together a plan. Audience research, platform recommendations, content calendar. You can run with it yourself or hand it to me.</p>
-        </div>
+        <a href="https://wa.me/27726644422?text=Hi%20T%2C%20can%20you%20look%20at%20my%20page%20and%20tell%20me%20where%20you%20would%20start%3F%20My%20business%20is%3A%20" target="_blank" rel="noopener noreferrer" class="btn btn--gold" data-track="services-page-check">Ask T Where To Start</a>
       </div>
     </div>
   </section>
@@ -434,7 +399,7 @@
           <div class="portfolio__overlay">
             <span class="portfolio__tag">Hospitality & Adventure</span>
             <h3 class="portfolio__name">Kampi.co.za</h3>
-            <p class="portfolio__desc">Customer testimonials, adventure guides, community engagement, and bilingual content for South Africa's peer-to-peer caravan rental platform.</p>
+            <p class="portfolio__desc">Built trust for a peer-to-peer caravan rental platform with customer stories, adventure guides, community engagement, and bilingual content.</p>
           </div>
         </div>
         <div class="portfolio__item reveal">
@@ -444,7 +409,7 @@
           <div class="portfolio__overlay">
             <span class="portfolio__tag">Entertainment</span>
             <h3 class="portfolio__name">Etienne Steyn</h3>
-            <p class="portfolio__desc">Event promotional design and live performance photography for Garden Route music events.</p>
+            <p class="portfolio__desc">Turned event posters and live photography into stronger venue pull for Garden Route music events.</p>
           </div>
         </div>
         <div class="portfolio__item reveal">
@@ -454,7 +419,7 @@
           <div class="portfolio__overlay">
             <span class="portfolio__tag">Trades & Services</span>
             <h3 class="portfolio__name">PRO-Installations</h3>
-            <p class="portfolio__desc">Full brand design for a 25+ year installation company. Clear messaging, strong call-to-action, professional positioning.</p>
+            <p class="portfolio__desc">Helped a 25+ year service business look as professional online as they are onsite, with clear service messaging and calls to action.</p>
           </div>
         </div>
         <div class="portfolio__item reveal">
@@ -492,7 +457,7 @@
           <div class="process__number">01</div>
           <div class="process__content">
             <h3 class="process__step-title">Discovery</h3>
-            <p class="process__step-text">We sit down — or hop on a call — and I get to know your brand. Not just what you sell, but why you started, who you serve, and what keeps you going. I only take on brands I genuinely connect with.</p>
+            <p class="process__step-text">We sit down or hop on a call, and I get to know your brand. Not just what you sell, but why you started, who you serve, and what keeps you going. I only take on brands I genuinely connect with.</p>
           </div>
         </div>
         <div class="process__connector" aria-hidden="true"></div>
@@ -500,7 +465,7 @@
           <div class="process__number">02</div>
           <div class="process__content">
             <h3 class="process__step-title">Strategy</h3>
-            <p class="process__step-text">I build a content strategy that sounds like you, reaches the right people, and actually moves the needle. No cookie-cutter templates — your plan is as unique as your business.</p>
+            <p class="process__step-text">I build a content strategy that sounds like you, reaches the right people, and actually moves the needle. No cookie-cutter templates; your plan is as unique as your business.</p>
           </div>
         </div>
         <div class="process__connector" aria-hidden="true"></div>
@@ -535,12 +500,12 @@
       <div class="contact__inner">
         <div class="contact__text">
           <p class="section__label section__label--light reveal">Get In Touch</p>
-          <h2 class="section__title section__title--light reveal">Ready to find your brand's <em class="accent">voice</em>?</h2>
-          <p class="section__intro section__intro--light reveal">Whether you're running a guest house in Knysna, a salon in Plettenberg Bay, or a business anywhere in South Africa, I'd like to hear what you're working on. WhatsApp is usually the fastest way to reach me.</p>
+          <h2 class="section__title section__title--light reveal">Send me your page and I will tell you where I would <em class="accent">start</em>.</h2>
+          <p class="section__intro section__intro--light reveal">Whether your page has gone quiet, your content feels scattered, or your ads are not bringing the right enquiries, send me what you have. WhatsApp is usually the fastest way to reach me.</p>
           <p class="contact__note reveal">Serving Knysna, George, Plett, Sedgefield, Wilderness, Mossel Bay, and beyond. Remote clients welcome.</p>
         </div>
         <div class="contact__details reveal">
-          <a href="mailto:alchemist@socioalchemy.co.za" class="contact__card">
+          <a href="mailto:alchemist@socioalchemy.co.za" class="contact__card" data-track="contact-email">
             <div class="contact__card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
             </div>
@@ -549,7 +514,7 @@
               <span class="contact__card-value">alchemist@socioalchemy.co.za</span>
             </div>
           </a>
-          <a href="https://wa.me/27726644422" target="_blank" rel="noopener noreferrer" class="contact__card">
+          <a href="https://wa.me/27726644422?text=Hi%20T%2C%20can%20you%20look%20at%20my%20page%20and%20tell%20me%20where%20you%20would%20start%3F%20My%20business%20is%3A%20" target="_blank" rel="noopener noreferrer" class="contact__card" data-track="contact-whatsapp">
             <div class="contact__card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
             </div>
@@ -558,7 +523,7 @@
               <span class="contact__card-value">072 664 4422</span>
             </div>
           </a>
-          <a href="https://www.instagram.com/socioalchemy" target="_blank" rel="noopener noreferrer" class="contact__card">
+          <a href="https://www.instagram.com/socioalchemy" target="_blank" rel="noopener noreferrer" class="contact__card" data-track="contact-instagram">
             <div class="contact__card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
             </div>
@@ -567,7 +532,7 @@
               <span class="contact__card-value">@socioalchemy</span>
             </div>
           </a>
-          <a href="https://www.facebook.com/profile.php?id=61577174818954" target="_blank" rel="noopener noreferrer" class="contact__card">
+          <a href="https://www.facebook.com/profile.php?id=61577174818954" target="_blank" rel="noopener noreferrer" class="contact__card" data-track="contact-facebook">
             <div class="contact__card-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </div>
@@ -620,7 +585,7 @@
   </footer>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/27726644422" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/27726644422?text=Hi%20T%2C%20can%20you%20look%20at%20my%20page%20and%20tell%20me%20where%20you%20would%20start%3F%20My%20business%20is%3A%20" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Chat on WhatsApp" data-track="floating-whatsapp">
     <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958C9.726 31.076 12.746 32 16.004 32 24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.338 22.594c-.39 1.1-1.932 2.014-3.164 2.28-.844.18-1.946.322-5.66-1.216-4.75-1.966-7.806-6.78-8.04-7.094-.226-.314-1.9-2.53-1.9-4.826s1.2-3.424 1.628-3.892c.39-.426 1.034-.64 1.65-.64.2 0 .378.02.54.036.428.018.642.044.924.714.352.838 1.21 2.948 1.316 3.162.108.214.18.464.036.738-.136.282-.204.458-.408.702-.204.244-.43.544-.614.73-.204.212-.416.44-.178.862.236.422 1.054 1.738 2.262 2.816 1.556 1.386 2.866 1.816 3.272 2.016.408.2.646.166.884-.1.244-.274 1.04-1.21 1.318-1.628.274-.418.55-.348.924-.21.378.14 2.39 1.128 2.8 1.334.408.206.68.31.78.478.098.168.098.97-.294 2.07z"/></svg>
   </a>
 
