@@ -134,7 +134,7 @@ section[id] { scroll-margin-top: var(--nav-height); }
 }
 
 .section__intro, .contact__note, .process__step-text, .community__inner p, .about__text p, .privacy__text p, .services__note p {
-  max-width: 68ch;
+  max-width: 60ch;
 }
 .section__intro {
   font-size: 18px;
@@ -937,7 +937,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
   margin-bottom: 24px;
 }
 .privacy__text p {
-  max-width: 68ch;
+  max-width: 50ch;
   font-size: 15px;
   color: var(--charcoal);
   margin-bottom: 16px;
