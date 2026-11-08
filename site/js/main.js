@@ -172,15 +172,4 @@
   window.addEventListener('hashchange', () => {
     syncHashTarget();
   });
-
-  // ── Parallax on hero (subtle) ──
-  const heroGlow = document.querySelector('.hero__glow');
-  if (heroGlow) {
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      if (scrollY < window.innerHeight) {
-        heroGlow.style.transform = `translateY(${scrollY * 0.3}px)`;
-      }
-    }, { passive: true });
-  }
 })();
